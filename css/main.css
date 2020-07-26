@@ -956,25 +956,6 @@ body {
   margin-right: 8px;
 }
 
-.text-under {
-  padding: 20px 24px;
-}
-
-.portfolio-title {
-  color: #212121;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-.filtr-title {
-  color: #757575;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.9;
-}
-
 .portfolio-pages {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1034,6 +1015,21 @@ body {
   width: 100%;
 }
 
+.portfolio-title {
+  color: #212121;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.filtr-title {
+  color: #757575;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
 .portfolio-text {
   position: absolute;
   top: 0;
@@ -1050,6 +1046,10 @@ body {
 
 .page:hover .portfolio-text {
   opacity: 1;
+}
+
+.text-under {
+  padding: 20px 24px;
 }
 
 /* footer */
