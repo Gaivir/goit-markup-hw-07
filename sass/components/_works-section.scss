@@ -1,0 +1,41 @@
+/* works section */
+.section-box {
+  padding-top: 97px;
+  padding-bottom: 91px;
+  text-align: center;
+}
+
+.works-blok {
+  margin: 0;
+  padding: 0;
+}
+
+.work-box {
+  position: relative;
+  margin-right: 30px;
+  width: 370px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.works-title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 27px 0;
+
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.8),
+    rgba(47, 48, 58, 0.8)
+  );
+  color: $third-color;
+  font-weight: $main-fontWeight;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}

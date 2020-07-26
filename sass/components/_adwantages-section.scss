@@ -1,0 +1,63 @@
+/* Section adwantages */
+
+.advantages-box {
+  padding-top: 94px;
+}
+
+.block {
+  width: 270px;
+  margin-right: 30px;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f4fa;
+    /* background-size: contain; */
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+$icons: "antenna" "clock" "diagram" "astronaut";
+@each $iconName in $icons {
+  .icon-#{$iconName}::before {
+    background-image: url(../images/advantages/#{$iconName}.svg);
+  }
+}
+
+// .icon-antenna::before {
+//   background-image: url(../images/advantages/antenna.svg);
+// }
+// .icon-clock::before {
+//   background-image: url(../images/advantages/clock.svg);
+// }
+// .icon-diagram::before {
+//   background-image: url(../images/advantages/diagram.svg);
+// }
+// .icon-astronaut::before {
+//   background-image: url(../images/advantages/astronaut.svg);
+// }
+
+.advantages-title {
+  color: $secondary-color;
+  font-weight: $main-fontWeight;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.advantages-text {
+  color: $primery-color;
+  font-weight: $main-normal-fontWeight;
+  font-size: 14px;
+  line-height: 1.7;
+}

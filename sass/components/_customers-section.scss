@@ -1,0 +1,31 @@
+/* customers section */
+.customers-box {
+  width: 1170px;
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.company-box:not(:last-child) {
+  margin-right: 30px;
+}
+
+.link-company {
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: --color4 $main-transition, border $main-transition;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    --color4: #2196f3;
+  }
+}

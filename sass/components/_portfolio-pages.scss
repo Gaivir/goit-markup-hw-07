@@ -1,0 +1,70 @@
+.portfolio-pages {
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 94px;
+}
+
+.page {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: calc((100% - 60px) / 3);
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+
+  &:hover {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    background-color: rgba(33, 150, 243, 0.9);
+    transition: transform $main-transition;
+  }
+
+  .page:hover &::before {
+    transform: translateY(0);
+  }
+}
+
+.page-img {
+  width: 100%;
+  //   border: 5px solid black;
+}
+
+.portfolio-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  color: $third-color;
+  font-weight: $main-normal-fontWeight;
+  font-size: 18px;
+  line-height: 1.55;
+  opacity: 0;
+  transition: opacity $main-transition;
+
+  .page:hover & {
+    opacity: 1;
+  }
+}

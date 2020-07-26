@@ -1,0 +1,205 @@
+/* footer */
+.footer-block {
+  width: 1600px;
+  height: 252px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #2f303a;
+}
+
+.footer-logo {
+  color: $third-color;
+  font-family: $second-font-family;
+  font-weight: $main-fontWeight;
+  font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+
+  .title {
+    color: $accent-color;
+  }
+}
+
+.contacts-footer-block {
+  min-width: 231px;
+  display: inline-block;
+  padding-top: 45px;
+  padding-bottom: 28px;
+  margin-right: 69px;
+}
+
+.footer-address {
+  color: $third-color;
+  font-weight: $main-normal-fontWeight;
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+}
+
+.footer-contacts {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 9px;
+  transition: color $main-transition;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.footer-title {
+  margin-bottom: 20px;
+  color: $third-color;
+  font-weight: $main-fontWeight;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.logo-block {
+  min-width: 206px;
+  padding-top: 54px;
+  margin-right: 94px;
+}
+.footer-links {
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-position: center;
+  background-size: contain;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  transition: background-color $main-transition;
+
+  &-list + &-list {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    background-color: $accent-color;
+  }
+}
+
+$icons: "instagram" "twitter" "facebook" "linkedin";
+@each $iconName in $icons {
+  .icon-#{$iconName} {
+    background-image: url(../images/social_links/#{$iconName}.svg);
+  }
+}
+
+// .icon-instagram {
+//   background-image: url(../images/social_links/instagram.svg);
+// }
+// .icon-twitter {
+//   background-image: url(../images/social_links/twitter.svg);
+// }
+
+// .icon-facebook {
+//   background-image: url(../images/social_links/facebook.svg);
+// }
+// .icon-linkendin {
+//   background-image: url(../images/social_links/linkedin.svg);
+// }
+
+.form-page {
+  min-width: 570px;
+  padding-top: 54px;
+  align-items: center;
+}
+
+.form-inner {
+  display: flex;
+}
+
+/* subscription */
+.button {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+  margin-left: 12px;
+
+  color: $third-color;
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
+
+  font-family: inherit;
+  font-weight: $main-fontWeight;
+  font-size: 16px;
+  line-height: 1.9;
+  align-items: center;
+  letter-spacing: 0.06em;
+}
+
+.button-footer {
+  display: flex;
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+  margin-left: 12px;
+
+  color: $third-color;
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
+
+  font-family: inherit;
+  font-weight: $main-fontWeight;
+  font-size: 16px;
+  line-height: 1.9;
+  align-items: center;
+  letter-spacing: 0.06em;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-image: url(../images/subscription-logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.logo-img {
+  width: 13px;
+}
+
+.footer-block .subscription {
+  width: 358px;
+  height: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-weight: $main-normal-fontWeight;
+  font-size: 16px;
+  line-height: 1.9;
+  padding: 15px;
+}
+
+.main-footer-block {
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-left: 215px;
+  margin-right: 216px;
+}
+
+/* page down */
+.contacts-down {
+  text-align: center;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: $main-normal-fontWeight;
+  font-size: 12px;
+  line-height: 2;
+}

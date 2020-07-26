@@ -326,7 +326,6 @@ body {
   padding-right: 15px;
 }
 
-/* Header */
 .header {
   border: 1px solid rgba(117, 117, 117, 0.3);
   width: 1600px;
@@ -352,7 +351,6 @@ body {
           align-items: center;
 }
 
-/* Logo*/
 .logo {
   padding-top: 25px;
   padding-bottom: 25px;
@@ -453,7 +451,6 @@ body {
   fill: currentColor;
 }
 
-/* hero section */
 .first-section {
   margin-left: auto;
   margin-right: auto;
@@ -486,6 +483,8 @@ body {
 }
 
 .hero-button {
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 220px;
   padding-bottom: 200px;
 }
@@ -917,7 +916,18 @@ body {
 }
 
 /* Portfolio */
-/* button */
+.filtr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 93px;
+  margin-bottom: 34px;
+  padding-bottom: 16px;
+}
+
 .button-filter {
   padding: 6px 22px;
   color: #212121;
@@ -944,18 +954,6 @@ body {
 
 .button-list:not(:last-child) {
   margin-right: 8px;
-}
-
-.filtr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 93px;
-  margin-bottom: 34px;
-  padding-bottom: 16px;
 }
 
 .text-under {
@@ -1032,7 +1030,7 @@ body {
           transform: translateY(0);
 }
 
-.box .page-img {
+.page-img {
   width: 100%;
 }
 
