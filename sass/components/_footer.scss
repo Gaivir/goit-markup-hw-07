@@ -68,11 +68,8 @@
   display: inline-block;
   height: 44px;
   width: 44px;
+  padding: 12px;
   background-color: rgba(255, 255, 255, 0.1);
-  background-position: center;
-  background-size: contain;
-  background-size: 20px;
-  background-repeat: no-repeat;
   border-radius: 50%;
   transition: background-color $main-transition;
 
@@ -85,11 +82,9 @@
   }
 }
 
-$icons: "instagram" "twitter" "facebook" "linkedin";
-@each $iconName in $icons {
-  .icon-#{$iconName} {
-    background-image: url(../images/social_links/#{$iconName}.svg);
-  }
+.icon-footer {
+  width: 20px;
+  height: 20px;
 }
 
 // .icon-instagram {

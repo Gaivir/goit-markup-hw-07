@@ -43,17 +43,41 @@
 
 .header-link {
   color: $secondary-color;
-  transition: color $main-transition;
+  // transition: color $main-transition;
+}
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
+// &:hover,
+// &:focus {
+//   color: $accent-color;
+// }
 
-  &:hover::after,
-  &:focus::after {
-    opacity: 1;
-  }
+// &:hover::after,
+// &:focus::after {
+//   opacity: 1;
+// }
+
+//   &::after {
+//     content: "";
+//     display: block;
+//     width: 100%;
+//     height: 4px;
+//     margin-top: 28px;
+//     background-color: $accent-color;
+//     border-radius: 2px;
+//     opacity: 0;
+//     transition: opacity $main-transition;
+//   }
+// }
+
+.header-links + .header-links {
+  margin-left: 50px;
+}
+.header-link:last-child {
+  margin-left: 0;
+}
+
+.activ {
+  color: $accent-color;
 
   &::after {
     content: "";
@@ -63,21 +87,17 @@
     margin-top: 28px;
     background-color: $accent-color;
     border-radius: 2px;
-    opacity: 0;
-    transition: opacity $main-transition;
   }
 }
 
-.header-links + .header-links {
-  margin-left: 50px;
-}
-.header-link:last-child {
-  margin-left: 0;
+/* conntacs */
+.ggf {
+  display: flex;
+  align-items: center;
 }
 
-/* conntacs */
 .contacts-header {
-  display: inline-block;
+  display: flex;
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -109,4 +129,9 @@
   height: 11px;
   margin-right: 10px;
   fill: currentColor;
+}
+
+.icon-phone {
+  width: 9px;
+  height: 15px;
 }

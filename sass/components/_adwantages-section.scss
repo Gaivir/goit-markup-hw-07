@@ -5,46 +5,28 @@
 }
 
 .block {
+  display: block;
   width: 270px;
   margin-right: 30px;
-
-  &::before {
-    content: "";
-    display: block;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin-bottom: 30px;
-    height: 120px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #f5f4fa;
-    /* background-size: contain; */
-  }
 
   &:last-child {
     margin-right: 0;
   }
 }
 
-$icons: "antenna" "clock" "diagram" "astronaut";
-@each $iconName in $icons {
-  .icon-#{$iconName}::before {
-    background-image: url(../images/advantages/#{$iconName}.svg);
-  }
+.block-img {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
 }
-
-// .icon-antenna::before {
-//   background-image: url(../images/advantages/antenna.svg);
-// }
-// .icon-clock::before {
-//   background-image: url(../images/advantages/clock.svg);
-// }
-// .icon-diagram::before {
-//   background-image: url(../images/advantages/diagram.svg);
-// }
-// .icon-astronaut::before {
-//   background-image: url(../images/advantages/astronaut.svg);
-// }
+.icon-advantage {
+  width: 70px;
+  height: 70px;
+}
 
 .advantages-title {
   color: $secondary-color;

@@ -381,29 +381,6 @@ body {
 
 .header-link {
   color: #212121;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-link:hover, .header-link:focus {
-  color: #2196f3;
-}
-
-.header-link:hover::after, .header-link:focus::after {
-  opacity: 1;
-}
-
-.header-link::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  margin-top: 28px;
-  background-color: #2196f3;
-  border-radius: 2px;
-  opacity: 0;
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-links + .header-links {
@@ -414,9 +391,34 @@ body {
   margin-left: 0;
 }
 
+.activ {
+  color: #2196f3;
+}
+
+.activ::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 28px;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
 /* conntacs */
+.ggf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .contacts-header {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -449,6 +451,11 @@ body {
   height: 11px;
   margin-right: 10px;
   fill: currentColor;
+}
+
+.icon-phone {
+  width: 9px;
+  height: 15px;
 }
 
 .first-section {
@@ -492,16 +499,18 @@ body {
 /* Form */
 .backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1600px;
   height: 100%;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .backdrop.is-hidden {
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   visibility: hidden;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -523,6 +532,8 @@ body {
 .icon-clothe {
   width: 11px;
   height: 11px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-clothe:hover {
@@ -531,10 +542,14 @@ body {
 
 .form {
   position: absolute;
-  left: 536px;
-  top: 221px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   min-width: 528px;
   min-height: 581px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 40px;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -567,6 +582,8 @@ body {
 
 .form-field:focus-within > .form-icon {
   fill: #2196f3;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input {
@@ -585,6 +602,10 @@ body {
   color: #2196f3;
   -webkit-transform: translateY(-45px) translateX(-19px);
           transform: translateY(-45px) translateX(-19px);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus + .lable-comment,
@@ -592,6 +613,10 @@ body {
   color: #2196f3;
   -webkit-transform: translateY(-35px);
           transform: translateY(-35px);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-lable {
@@ -697,6 +722,8 @@ body {
   background-size: contain;
   background-origin: border-box;
   border-color: #2196f3;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contract-link {
@@ -711,41 +738,32 @@ body {
 }
 
 .block {
+  display: block;
   width: 270px;
   margin-right: 30px;
-}
-
-.block::before {
-  content: "";
-  display: block;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  margin-bottom: 30px;
-  height: 120px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #f5f4fa;
-  /* background-size: contain; */
 }
 
 .block:last-child {
   margin-right: 0;
 }
 
-.icon-antenna::before {
-  background-image: url(../images/advantages/antenna.svg);
+.block-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 25px;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
 }
 
-.icon-clock::before {
-  background-image: url(../images/advantages/clock.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/advantages/diagram.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/advantages/astronaut.svg);
+.icon-advantage {
+  width: 70px;
+  height: 70px;
 }
 
 .advantages-title {
@@ -803,6 +821,13 @@ body {
 }
 
 /* team section */
+.team-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1600px;
+  background-color: #f5f4fa;
+}
+
 .section-team {
   background-color: #f5f4fa;
   padding-top: 94px;
@@ -996,7 +1021,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 296px;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   background-color: rgba(33, 150, 243, 0.9);
@@ -1123,11 +1148,8 @@ body {
   display: inline-block;
   height: 44px;
   width: 44px;
+  padding: 12px;
   background-color: rgba(255, 255, 255, 0.1);
-  background-position: center;
-  background-size: contain;
-  background-size: 20px;
-  background-repeat: no-repeat;
   border-radius: 50%;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1141,20 +1163,9 @@ body {
   background-color: #2196f3;
 }
 
-.icon-instagram {
-  background-image: url(../images/social_links/instagram.svg);
-}
-
-.icon-twitter {
-  background-image: url(../images/social_links/twitter.svg);
-}
-
-.icon-facebook {
-  background-image: url(../images/social_links/facebook.svg);
-}
-
-.icon-linkedin {
-  background-image: url(../images/social_links/linkedin.svg);
+.icon-footer {
+  width: 20px;
+  height: 20px;
 }
 
 .form-page {
